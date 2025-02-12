@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <meta name="description" content="Sistemical ofrece soluciones de automatización para empresas, optimizando tareas repetitivas y mejorando la productividad.">
+    
+    <!-- Palabras Clave (SEO menos relevante hoy, pero útil) -->
+    <meta name="keywords" content="automatización, scripts, productividad, negocios, tecnología">
+    
+    <!-- Autor -->
+    <meta name="author" content="Sistemical">
+
+    <!-- Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Sistemical - Automatización Inteligente">
+    <meta property="og:description" content="Optimiza tu empresa con nuestras soluciones de automatización.">
+    <meta property="og:url" content="https://sistemical.com">
+    <meta property="og:type" content="website">
+
+
+</head>
+<header class="container header">
+    <nav class="nav">
+      <div class="logo">
+        <a href="{% url 'index' %}">
+          <h2>Sistemical.</h2>
+      </a>      
+      </div>
+      
+      <div class="nav_menu" id="nav_menu">
+        <button class="close_btn" id="close_btn">
+          <i class="ri-close-fill"></i>
+        </button>
+
+        <ul class="nav_menu_list">
+          <li class="nav_menu_item">
+            <a href="{%url 'about'%}" class="nav_menu_link">Nosotros.</a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="toggle_btn" id="toggle_btn">
+        <i class="ri-menu-line"></i>
+      </button>
+    </nav>
+  </header>
+  
+<body>
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Sistemical. Todos los derechos reservados.</p>
+  </footer>
+  
+  <script>
+      // Obtener el año actual y actualizar el footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  
+  <style>
+      .footer {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          text-align: center;
+          padding: 15px 0;
+          padding-bottom: 30px;
+          font-size: 14px;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
+  </style>
+  
+</body>
+</html>

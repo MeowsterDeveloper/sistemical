@@ -1,0 +1,87 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Nosotros{% endblock %}
+
+{% block content %}
+<div class="formbold-main-wrapper" data-aos="fade-up">
+  <div class="formbold-form-wrapper">
+    <img src="{% static 'about.svg' %}" alt="team-img" />
+      <div class="formbold-input-flex">
+        <div>
+          <br>
+          <h2>Nuestra Mentalidad y Cómo Surgió Sistemical</h2>
+          <br>
+          <p>
+              En un mundo donde la tecnología avanza rápidamente, muchas empresas aún enfrentan procesos manuales que consumen tiempo y recursos. 
+              La automatización no es solo una tendencia, es una necesidad para cualquier negocio que busque eficiencia y crecimiento. 
+              <strong>Sistemical</strong> nació con la visión de hacer la automatización accesible, confiable y efectiva para empresas de todos los tamaños.
+          </p>
+          <br>
+          <p>
+              <strong>Nuestro origen surge de una simple pregunta:</strong> ¿Por qué perder horas en tareas repetitivas cuando la tecnología puede hacer el trabajo por nosotros? 
+              Con años de experiencia en desarrollo y automatización, identificamos la necesidad de herramientas prácticas que optimicen procesos sin requerir grandes inversiones en software complejo.
+          </p>
+          <br>
+          <p>
+              En <strong>Sistemical</strong>, creemos en la simplicidad y el impacto real. Nuestro enfoque es ofrecer <strong>scripts de automatización listos para usar</strong>, 
+              diseñados para resolver problemas específicos y aumentar la productividad. Ya sea la gestión de datos, la automatización de reportes o la optimización de tareas administrativas, 
+              nuestro objetivo es claro: <strong>hacer que la tecnología trabaje por ti</strong>.
+          </p>
+          <br>
+          <p>
+              Sabemos que cada empresa es única y que el soporte adecuado marca la diferencia. Por eso, ofrecemos soluciones con y sin asistencia técnica, asegurando que nuestros clientes tengan opciones flexibles según sus necesidades.
+          </p>
+          <br>
+          <p>
+              Nuestra mentalidad es clara: <strong>Menos trabajo manual, más resultados.</strong> No se trata de reemplazar personas, sino de liberar su tiempo para enfocarse en lo que realmente importa. 
+              Con cada línea de código que escribimos, estamos ayudando a empresas a optimizar su operativa y a dar un paso hacia el futuro de los negocios.
+          </p>
+          <br>
+          <p><em>Bienvenido a <strong>Sistemical</strong>, donde la automatización es simple, efectiva y accesible.</em></p>
+      </div>
+      
+      </div>
+  </div>
+      <!-- ==== ANIMATE ON SCROLL JS CDN -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <!-- ==== GSAP CDN ==== -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+      <!-- ==== SCRIPT.JS ==== -->
+      <script src="{% static 'script.js' %}" defer></script>
+</div>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10vh; /* Baja el contenido un 30% */
+}
+
+.formbold-form-wrapper {
+    max-width: 900px; /* Aumentado el ancho */
+    width: 90%; /* Asegura que sea responsive */
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.formbold-img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+  
+</style>
+
+{% endblock %}
